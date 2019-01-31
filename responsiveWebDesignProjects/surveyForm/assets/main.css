@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: ubuntu;
+  src: url(Ubuntu-Regular.ttf);
+}
+
+form{
+  /* display: none; */
+}
+
+*{
+  font-size: 16px;
+  font-weight: normal;
+  font-family: ubuntu;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #ddcdc2;
+}
+
+html{
+  background-color: #0B0A18;
+}
+
+h1{
+  font-size: 2em;
+  font-weight: bold;
+  margin: .5em;
+  color: white;
+  text-shadow: 0 0 1em #cb79a7;
+}
+
+h2{
+  font-size: 1.7em;
+}
+
+b{
+  font-weight: bold;
+}
+
+i{
+  font-style: italic;
+}
+
+textarea, input{
+  background-color: #895070;
+  border: none;
+  border-radius: 20px;
+  padding: .3em;
+  outline: none;
+}
+
+textarea{
+  padding: .5em;
+  resize: none;
+  margin-top: .5em;
+}
+
+input{
+  text-align: center;
+}
+
+input[type=radio], input[type=checkbox]{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+li label{
+  width: 100%;
+}
+
+li > label{
+  cursor: pointer;
+}
+
+input[type=checkbox] + span,
+input[type=radio] + span{
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin-right: .5em;
+  background-color: #895070;
+  border-radius: 5px;
+}
+
+input[type=checkbox] + span::after,
+input[type=radio] + span::after{
+  display: inline-block;
+  content: "";
+  width: .5em;
+  height: .5em;
+}
+
+input[type=radio] + span{
+  border-radius: 50%;
+}
+
+input[type=checkbox]:checked + span,
+input[type=radio]:checked + span{
+  background-color: #cb79a7;
+}
+
+input[type=checkbox]:checked + span,
+input[type=radio]:checked + span{
+  background-color: #cb79a7;
+}
+
+input[type=checkbox]:checked + span,
+input[type=radio]:checked + span{
+  background-color: #cb79a7;
+}
+
+input[type=checkbox]:checked + span::after,
+input[type=radio]:checked + span::after{
+  background-color: black;
+  position: relative;
+  left: .25em;
+  bottom: .20em;
+  border-radius: 50%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::placeholder{
+  color: #c9bd79;
+  text-align: center;
+}
+
+p{
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+hr{
+  border: 1px #0B0A18 solid;
+  border-bottom: 1px #302655 solid;
+}
+
+hr, .box{
+  margin: 1em 0;
+}
+
+ul{
+  text-align: left;
+  width: 200px;
+  margin: auto;
+}
+
+ul li input{
+  margin-right: .5em;
+}
+
+form{
+  width: 400px;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+button, select{
+  background-color: black;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+}
+
+select{
+  padding: 0 .5em;
+  margin: 0 .5em;
+  cursor: pointer;
+}
+
+button{
+  padding: 1em;
+  cursor: pointer;
+}
+
+button:active{
+  background-color: #160a18;
+}
+
+#mdlBox{
+  display: none;
+}
+
+.modal-back{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0, .5);
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal{
+  background: rgba(0,0,0, .7);
+  position: absolute;
+  /* width: 50vw; */
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.modal h2{
+  background-color: black;
+  padding: .3em;
+}
+
+.modal p{
+  text-align: justify;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+.box-flx{
+  display: flex;
+}
+
+.inline-input{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  auto-fit:repeat;
+  margin: .3em;
+}
+
+.inline-input label{
+  text-align: right;
+  grid-column: 2/3;
+  padding-right: .5em;
+}
+
+.main-content{
+  background-color: #48304B;
+  /* border: 1px #bbb solid; */
+  border-radius: 20px;
+  padding: 1em;
+  text-align: center;
+}
+
+#title{
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  html{
+    overflow-x: hidden;
+  }
+  select{
+    margin: auto;
+    width: 90vw;
+    padding: .3em;
+  }
+  textarea{
+    width: 90vw;
+  }
+  label{
+    margin: .2em 0;
+  }
+  .modal{
+    width: 100vw;
+  }
+  .modal p{
+    padding: .5em;
+    margin: auto;
+    width: 95vw;
+  }
+  .main-content, form{
+    width: 100vw;
+    border-radius: 0;
+    padding: .5em 0;
+  }
+  .inline-input{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: auto;
+  }
+  .inline-input label{
+    text-align: center;
+    text-align: center;
+    width: 90vw;
+  }
+  .inline-input input{
+    width: 85vw;
+    margin: auto;
+  }
+  .box-flx{
+    flex-direction: column;
+  }
+}
