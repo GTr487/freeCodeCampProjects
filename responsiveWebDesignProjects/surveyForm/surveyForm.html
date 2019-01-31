@@ -16,7 +16,7 @@
   </header>
 
 
-  <form id="survery-form" class="main-content">
+  <form id="survey-form" class="main-content">
     <p id="description" class="dsc">Explíquenos un poco sobre usted</p>
 
     <hr>
@@ -32,7 +32,7 @@
       </div>
       <div class="number-cont inline-input">
         <label for="number" id="number-label">Edad:</label>
-        <input type="number" name="edad" id="number" placeholder="Inserte su edad" required>
+        <input type="number" name="edad" id="number" min=0 max=255 placeholder="Inserte su edad" required>
       </div>
     </div>
 
@@ -84,4 +84,5 @@
   </div>
 
 </body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </html>

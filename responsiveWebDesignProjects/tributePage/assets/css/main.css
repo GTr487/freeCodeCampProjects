@@ -6,96 +6,90 @@
   src: url("../fonts/Quicksand-Regular.ttf");
 }
 
-
 html{
-  background: url("../img/backg.png") repeat;
-  overflow-x: hidden;
-}
-
-body{
-  width: 100vw;
-  color: #333;
   font-family: qck;
 }
 
-header{
+body{
+  background: #f5d21b;
+  width: 100vw
+  overflow-x: hidden;
+}
+
+.cont{
+  width: 100%;
+}
+
+.title{
+  background: black;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  padding: .5em .5em .5em .5em;
+  white-space: nowrap;
   text-align: center;
-  width: 95%;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.in-title{
+  color: #ddd;
+  font-size: 0.7em;
+  display: block;
+  white-space: nowrap;
+}
+
+.subtitle{
+  text-align: center;
+  font-weight: bold;
+  padding: .5em
+}
+
+.img-cont{
+  display: block;
+  background: transparent;
+  text-align: center;
+  margin-top: -4em;
 }
 
 .img{
-  width: 40vmin;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-}
-
-.quotecont{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   display: block;
+  margin: auto;
+  max-width: 100%;
 }
 
-.quote{
-  font-size: 2.5em;
-  padding: .5em 0 1em 0;
-  border-bottom: 1px solid #999;
+.img-caption{
+  font-style: italic;
+  font-size: 0.8em;
+  line-height: 1em;
 }
 
-.author{
-  font-size: 4em;
-  font-weight: bold;
-  margin-top: .5em;
-  font-family: serif;
+.info{
+  padding: 1em;
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+  padding-bottom: 4em;
 }
 
-.ocupation{
-  margin-top: -0.5em;
-  padding: 0 0 2em 0;
-  border-bottom: 1px solid #999;
+.info p{
+  padding-top: 1em;
 }
 
-.wk{
-  width: 60vmin;
-  height: 50vmin;
-  font-size: 5vmin;
-  display: flex;
-  text-align: center;
-  align-items: center;
-}
-
-.wk a{
-  color: #2f1b1b;
+.bold{
   font-weight: bold;
 }
 
-.wk a:hover{
-  color: #c40707;
+.link{
+  padding: 1em;
+  position: absolute;
+  right: 1em;
+  color: #444;
+  bottom: .5em;
+  white-space: nowrap;
+
 }
 
-main{
-  width: 90vw;
-  margin: 1.5em auto;
-}
-
-ul li{
-  margin-bottom: 1em;
-}
-
-ul h4{
-  font-weight: bold;
-  padding: .2em;
-}
-
-ul p{
-  padding-left: 1em;
-}
-
-footer{
-  font-size: .9em;
-  color: black;
-  border-top: 1px solid #999;
-  padding: 2px;
-  background-color: rgba(0, 0, 0, 0.18);
+.link:hover{
+  background: black;
+  color: white;
 }
