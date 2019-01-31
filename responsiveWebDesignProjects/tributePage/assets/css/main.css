@@ -1,0 +1,101 @@
+@charset "UTF-8";
+@import "reset.css";
+
+@font-face {
+  font-family: qck;
+  src: url("../fonts/Quicksand-Regular.ttf");
+}
+
+
+html{
+  background: url("../img/backg.png") repeat;
+  overflow-x: hidden;
+}
+
+body{
+  width: 100vw;
+  color: #333;
+  font-family: qck;
+}
+
+header{
+  text-align: center;
+  width: 95%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img{
+  width: 40vmin;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.quotecont{
+  display: block;
+}
+
+.quote{
+  font-size: 2.5em;
+  padding: .5em 0 1em 0;
+  border-bottom: 1px solid #999;
+}
+
+.author{
+  font-size: 4em;
+  font-weight: bold;
+  margin-top: .5em;
+  font-family: serif;
+}
+
+.ocupation{
+  margin-top: -0.5em;
+  padding: 0 0 2em 0;
+  border-bottom: 1px solid #999;
+}
+
+.wk{
+  width: 60vmin;
+  height: 50vmin;
+  font-size: 5vmin;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.wk a{
+  color: #2f1b1b;
+  font-weight: bold;
+}
+
+.wk a:hover{
+  color: #c40707;
+}
+
+main{
+  width: 90vw;
+  margin: 1.5em auto;
+}
+
+ul li{
+  margin-bottom: 1em;
+}
+
+ul h4{
+  font-weight: bold;
+  padding: .2em;
+}
+
+ul p{
+  padding-left: 1em;
+}
+
+footer{
+  font-size: .9em;
+  color: black;
+  border-top: 1px solid #999;
+  padding: 2px;
+  background-color: rgba(0, 0, 0, 0.18);
+}
