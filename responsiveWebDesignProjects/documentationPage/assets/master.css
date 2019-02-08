@@ -1,0 +1,166 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+code{
+	background: #fafafa;
+	display: block;
+	padding: 1em;
+	font-family: monospace;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.navbar{
+	float: left;
+	height: 100vh;
+	background-color: #333;
+	color: #ddd;
+	padding: 1em;
+}
+.nav-title{
+	padding: 1.5em 1em;
+	text-align: center;
+	border-bottom: 2px solid #666;
+}
+.nav-title h2{
+	max-width: 15em;
+}
+
+.nav-link{
+	display: block;
+	padding: .5em 1em;
+	color: #ddd;
+	text-decoration: none;
+	border-bottom: 1px solid #666;
+}
+.nav-link:hover{
+	background: #555;
+}
+.nav-link:active{
+	background: #666;
+}
+
+.main-cont{
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 1em;
+}
+
+.main-section{
+	padding: 1em;
+}
+.main-section header{
+	font-weight: bold;
+	font-size: 1.5em;
+}
+.main-section p{
+	color: #333;
+	padding: 1em;
+	line-height: 1.5em;
+}
+.main-section code{
+	margin-left: 1.5em;
+	margin-right: 2.5em;
+	overflow-x: auto;
+	color: #333;
+	white-space: nowrap;
+}
+.main-section li{
+	padding: 1em;
+}
+.main-section li h4{
+	display: inline-block;
+}
+.main-section li p{
+	padding-left: 1.5em;
+}
+.main-section li code{
+	margin-left: 1.5em;
+}
+
+#toggle-men{
+	display: none;
+}
+
+.toggle-men-btn{
+	display: none;
+	width: 2em;
+	height: 2em;
+	background: black;
+	position: fixed;
+	top: .5em;
+	right: .5em;
+	justify-content: center;
+	align-items: center;
+	z-index: 999;
+}
+.toggle-men-btn span{
+	display: block;
+	width: 75%;
+	height: 14%;
+	background: white;
+	position: relative;
+}
+.toggle-men-btn span::before,
+.toggle-men-btn span::after{
+	content: '';
+	position: absolute;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.toggle-men-btn span::before{
+	left: 0;
+	top: -200%;
+}
+.toggle-men-btn span::after{
+	left: 0;
+	bottom: -200%;
+}
+
+@media only screen and (max-width: 64em) {
+	#toggle-men:checked ~ #navbar{
+		transform: translateX(0);
+	}
+
+	h1{
+		text-align: center;
+		padding: 1em 2em;
+	}
+
+	.toggle-men-btn{
+		display: flex;
+	}
+
+	.navbar{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		transform: translateX(-100%);
+		transition: 500ms;
+		background: rgba(51, 51, 51, 0.98);
+	}
+
+	.nav-title{
+		padding-top: 3em;
+	}
+
+	.main-cont{
+		padding: 0;
+		padding-bottom: 5em;
+	}
+
+	.main-section li{
+		padding: 1em 0;
+	}
+	.main-section p{
+		padding-right: 1.5em;
+	}
+}
